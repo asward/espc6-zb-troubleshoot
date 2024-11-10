@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  esp-idf-dev:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0:rw
+      # - /dev/ttyACM0:/dev/ttyACM0
